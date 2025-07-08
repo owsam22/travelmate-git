@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suggested Trips | TravelMate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="s.css">
+<script type="module">
+  import { auth, onAuthStateChanged } from './firebase.js';
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // Redirect before anything else renders
+      window.location.href = 'user.html';
+    }
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <h1 class="logo"><i class="fa-solid fa-compass"></i> <span class="gradient-text">TravelMate</span></h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h2 class="section-title">Your Personalized Travel Suggestions</h2>
+
+  <div class="highlight-box" id="userInputSummary">
+    <strong><span class="loading-text">Loading your trip details...</span></strong>
+  </div>
+  
+  <div id="popup">Trip preferences submitted! Fetching suggestions...</div>
+
+  <div class="cards" id="suggestionCards">
+    <!-- Suggestions go here -->
+  </div>
+
+  <div class="btn-group">
+    <button class="btn" onclick="window.location.href='index.html#srh'">
+      <i class="fas fa-calendar-alt"></i> Create Itinerary
+    </button>
+    <button class="btn" onclick="window.location.href='index.html'">
+      <i class="fas fa-home"></i> Back to Home
+    </button>
+  </div>
+</div>
+<footer id="end" class="smart-footer">
+  <div class="footer-container">
+
+    <!-- Brand Section -->
+    <div class="footer-brand">
+        <a href="#" style="text-decoration: none;"><i class="fa-solid fa-compass"></i>
+        <span class="gradient-text">TravelMate</span></a>
+      <p class="animate-slide-in">AI-powered journeys made effortless.</p>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="footer-grid">
+
+      <!-- Quick Links -->
+      <div class="footer-box animate-slide-in delay-1">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#srh">Search</a></li>
+          <li><a href="#hlt">AI Picks</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+<div class="footer-box animate-slide-in delay-2">
+  <h4>Connect</h4>
+  <div class="social-icons-colorful">
+    <a href="https://github.com/owsam22"><i class="bx bxl-github"></i></a>
+    <a href="https://instagram.com/owsam22"><i class="bx bxl-instagram"></i></a>
+    <a href="https://twitter.com/owsam22"><i class="bx bxl-twitter"></i></a>
+    <a href="https://linkedin.com"><i class="bx bxl-linkedin"></i></a>
+    <a href="https://youtube.com/@samarpan.22"><i class="bx bxl-youtube"></i></a>
+  </div>
+</div>
+
+
+      <!-- AI Travel Assistant -->
+      <div class="footer-box animate-float delay-3 ai-bot">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712105.png" alt="AI Assistant" />
+         <p>Planning your next smart trip...</p>
+      </div>
+
+    </div>
+
+    <!-- Footer Copy -->
+    <div class="footer-copy animate-fade-in delay-4">
+      <p>© 2025 TravelMate. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+<script>
+ function createCardItinerary(destination) {
+  const days = 'as recommended';
+
+  // Encode and redirect
+  const encodedDestination = encodeURIComponent(destination);
+  window.location.href = `it.html?destination=${encodedDestination}&days=${days}`;
+}
+
+window.createCardItinerary = createCardItinerary;
+
+</script>
+<script src="s.js"></script>
+</body>
+</html>

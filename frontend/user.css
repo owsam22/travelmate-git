@@ -1,0 +1,191 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to right, #f0fdfa, #ccfbf1);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+  header {
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    margin: 1rem 5%;
+    border-radius: 30px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo i {
+    color: #4f46e5;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #4f46e5, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #4f46e5;
+  }
+
+
+    /* PROFILE CARD */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .profile-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 2px solid #10b981;
+    }
+
+    .profile-card h2 {
+      margin: 0.2rem 0;
+      font-size: 1.3rem;
+      color: #111827;
+    }
+
+    .profile-card p {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      margin: 0.4rem 0.3rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-login {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-logout {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn-home {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn-weather {
+      background-color: #facc15;
+      color: #92400e;
+    }
+
+    #liveWeatherDisplay {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 480px) {
+      nav a:not(.user-link) {
+        display: none;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f9fafb;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: #10b981;
+      text-decoration: none;
+    }

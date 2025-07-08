@@ -1,0 +1,200 @@
+@media (max-width: 768px) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    header {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 90%;
+        text-align: center;
+    }
+
+    .search-bar,
+    .search-bar .input-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100% !important;
+        font-size: 1rem;
+    }
+
+    .ai-btn {
+        width: 100%;
+        border-radius: 12px;
+        padding: 5%;
+        display: flex;
+    }
+
+    .ai-btn:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(120deg, #4f46e5, #92fe9d);
+    }
+
+    .highlight {
+        background: linear-gradient(135deg, #b6f7ff, #fff9f9);
+        margin: 0;
+        width: 100%;
+    }
+
+    .highlight-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .cards {
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+
+    }
+
+    .card {
+        margin: 0;
+        max-width: 100%;
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        z-index: 1000;
+    }
+
+
+    .scroll-container {
+        margin-left: 90%;
+        margin-top: 95%;
+    }
+
+    .scroll-container {
+        right: 10px;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font-size: 16px;
+    }
+
+    .not-sure-wrapper {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .feedback-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .why-card {
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+    .ai-indicator {
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #foot-animation {
+        display: none;
+    }
+
+    #foot-links {
+        display: none;
+    }
+
+
+}

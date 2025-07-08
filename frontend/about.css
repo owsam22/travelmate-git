@@ -1,0 +1,445 @@
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+      overflow-x: hidden;
+    }
+
+    header {
+  background: #112929;
+  color: white;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+header a {
+  padding: 10px 15px;
+  border-radius: 14px;
+  background: #112929;
+  position: fixed;
+  left: 20px;
+  top: 10%;
+  transform: translateY(-50%);
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* add transform here */
+}
+
+header a:hover {
+  box-shadow: 0 12px 30px rgba(5, 79, 109, 0.7);
+  transform: translateY(-50%) scale(1.05); /* scale up 5% */
+}
+
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+main {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #f8fdff; /* Dark slate gray with some softness */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* stronger shadow for contrast */
+  position: relative;
+  overflow: hidden;
+  color: black; /* body text black stays */
+}
+
+
+    /* Background Shapes */
+    .background-blur {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(45deg, #00b4d8, #0077b6);
+      filter: blur(120px);
+      top: -100px;
+      right: -100px;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    /* Developer Section */
+    .developer-section {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .developer-section h2 {
+      color: #0077b6;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .developer-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 280px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      backdrop-filter: blur(10px);
+      transition: transform 0.5s, box-shadow 0.5s;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+
+
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(5, 79, 109, 0.7);
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #0077b6;
+      background: white;
+      padding: 5px;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 24px;
+      color: #0077b6;
+    }
+
+    .card p {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* Other Sections */
+    section h2 {
+      color: #0077b6;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✨ ";
+    }
+
+/* Footer */
+.smart-footer {
+  background: #f9fafb;
+  color: #1e293b;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-brand h2 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+
+.footer-brand p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+.footer-brand a {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.footer-box {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.footer-box h4 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-box ul li {
+  margin: 6px 0;
+}
+.footer-box ul li a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+.footer-box ul li a:hover {
+  color: #14b8a6;
+}
+
+
+.social-icons-colorful a {
+  font-size: 2rem;
+  margin: 0 10px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  text-decoration: none;
+  
+}
+
+.social-icons-colorful a:hover {
+  transform: scale(1.15);
+  background-color: rgba(0, 0, 0, 0.05); /* soft gray hover bg */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Brand-specific colors */
+.bxl-github { color: #333; }
+.bxl-instagram { color: #E1306C; }
+.bxl-twitter { color: #1DA1F2; }
+.bxl-linkedin { color: #0A66C2; }
+.bxl-youtube { color: #FF0000; }
+
+.ai-bot img {
+  width: 60px;
+  margin-bottom: 10px;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.4s;
+}
+.ai-bot img:hover{
+  transform: scale(1.1);
+}
+.ai-bot p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Footer Copy */
+.footer-copy p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-fade-in { animation: fadeIn 1s ease forwards; }
+.animate-slide-in { animation: slideIn 0.8s ease forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* Animation delays */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* Responsive Fixes */
+
+
+
+
+
+
+    .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .profile-wrapper img {
+  transform: translateY(-10px);
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card:hover .social-icons {
+  transform: translateX(-50%) translateY(10%);
+  opacity: 1;
+}
+
+.social-icons a {
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #52525292;
+  transform: scale(1.2);
+}
+.portfolio-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: rgb(203, 172, 233);
+  color: rgb(255, 255, 255);
+  padding: 5px 18px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card:hover .portfolio-button {
+  transform: translateX(-50%) translateY(5%);
+  opacity: 1;
+}
+
+.portfolio-button:hover {
+  background: rgb(176, 145, 206);
+  transform: translateX(-50%) translateY(5%) scale(1.05);
+}
+
+
+.card {
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .developer-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+  }
+
+  .profile-wrapper img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .social-icons {
+    justify-content: center;
+    bottom: 10px;
+  }
+
+  .social-icons a {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Itinerary | TravelMate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="it.css">
+  <style>
+    #itinerary-content {
+      background: white;
+      color: black;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .itinerary-card {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <h1 class="logo"><i class="fa-solid fa-compass"></i> <span class="gradient-text">TravelMate</span></h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="itinerary-section">
+  <div class="container">
+    <h2>Your Personalized Travel Itinerary</h2>
+    <p class="subheading">Based on your preferences and destination</p>
+
+    <div class="itinerary-placeholder" id="itinerary-content">
+      <i class="fas fa-map-marked-alt big-icon"></i>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn" onclick="window.location.href='index.html'">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </button>
+      <!-- <button class="btn" onclick="downloadPDF()">
+        <i class="fas fa-file-download"></i> Download PDF
+      </button> -->
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer id="end" class="smart-footer">
+  <div class="footer-container">
+
+    <!-- Brand Section -->
+    <div class="footer-brand">
+        <a href="#" style="text-decoration: none;"><i class="fa-solid fa-compass"></i>
+        <span class="gradient-text">TravelMate</span></a>
+      <p class="animate-slide-in">AI-powered journeys made effortless.</p>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="footer-grid">
+
+      <!-- Quick Links -->
+      <div class="footer-box animate-slide-in delay-1">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+<div class="footer-box animate-slide-in delay-2">
+  <h4>Connect</h4>
+  <div class="social-icons-colorful">
+    <a href="https://github.com/owsam22"><i class="bx bxl-github"></i></a>
+    <a href="https://instagram.com/owsam22"><i class="bx bxl-instagram"></i></a>
+    <a href="https://twitter.com/owsam22"><i class="bx bxl-twitter"></i></a>
+    <a href="https://linkedin.com"><i class="bx bxl-linkedin"></i></a>
+    <a href="https://youtube.com/@samarpan.22"><i class="bx bxl-youtube"></i></a>
+  </div>
+</div>
+
+
+      <!-- AI Travel Assistant -->
+      <div class="footer-box animate-float delay-3 ai-bot">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712105.png" alt="AI Assistant" />
+         <p>Planning your next smart trip...</p>
+      </div>
+
+    </div>
+
+    <!-- Footer Copy -->
+    <div class="footer-copy animate-fade-in delay-4">
+      <p>© 2025 TravelMate. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+<script type="module">
+  import { auth, onAuthStateChanged } from './firebase.js';
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // Redirect before anything else renders
+      window.location.href = 'user.html';
+    }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="it.js"></script>
+
+</body>
+</html>
