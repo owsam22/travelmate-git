@@ -1,2 +1,0 @@
-const apiKey = 'Bearer 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';
-const weatherApiKey = '2686872b501a27fa263171d8b7e0cae7';
